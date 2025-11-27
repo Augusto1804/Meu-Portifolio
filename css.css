@@ -1,0 +1,374 @@
+/* ESTILOS GERAIS */
+body {
+    margin: 0;
+    background-color: #f6f2ee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #323841;
+}
+
+
+/* HEADER E NAVEGAÇÃO */
+header {
+    text-align: center;
+    background-color: #77726E;
+    padding: 15px 4px 20px 4px;
+    color: white;
+
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+h1 {
+    color: #f4f4f4;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.texto1 {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.navegacao-principal {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    background: #323841;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.btn:hover {
+    background-color: #f4f4f4;
+    color: #323841;
+    transform: translateY(-2px);
+}
+
+/* CORREÇÃO DO CABEÇALHO FIXO NOS LINKS ÂNCORA */
+#Sobre, #Projetos, #Habilidades, #Galeria, #Contato {
+    scroll-margin-top: 140px; 
+}
+
+
+/* SEÇÃO SOBRE MIM (CARD) */
+.card-sobre {
+    margin: 60px auto; 
+    max-width: 900px; 
+    padding: 30px; 
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+}
+
+/* Garante o alinhamento da Foto e do Texto ao Topo */
+.conteudo-sobre-flex {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px; 
+    align-items: flex-start; 
+}
+
+/* Título (h2) */
+.card-sobre .titulo1 {
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    margin-left: 0; 
+    font-size: 26px;
+    text-align: left; 
+    padding-left: 0;
+}
+
+.bloco-texto-sobre {
+    flex-grow: 1; 
+}
+
+.texto2 {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Imagem de Perfil */
+.img1 {
+    width: 300px;
+    height: auto;
+    border-radius: 6px;
+    border: solid 3px #3b4e6b;
+    flex-shrink: 0;
+    margin-top: 35px; 
+}
+
+
+/* SEÇÃO PROJETOS E OUTROS TÍTULOS */
+.titulo2 {
+    margin: 40px auto 20px auto;
+    font-size: 30px; 
+    text-align: center; 
+    border-bottom: 2px solid #3b4e6b; 
+    padding-bottom: 5px;
+    max-width: 800px;
+}
+
+/* Flexbox para a grade 2x2 centralizada */
+.cards-projetos {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 25px; 
+    padding: 0 15px 50px 15px;
+    
+    margin: 0 auto 50px auto; 
+}
+
+.caixa, .projeto-adicional {
+    background-color: #323841;
+    padding: 25px; 
+    border-radius: 12px;
+    color: white;
+    
+    flex-basis: calc(50% - 15px); /* Garante 2 colunas com o gap de 25px */
+    max-width: 480px; 
+    flex-grow: 1; 
+    
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.caixa:hover, .projeto-adicional:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.textod, .textoe {
+    font-size: 14px; 
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+/* SEÇÃO HABILIDADES (Tabela) */
+.tabela-habilidades-container {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px; 
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    max-width: 850px; 
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 400px; 
+}
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 15px 12px; 
+    text-align: left;
+    font-size: 15px;
+}
+
+th {
+    background-color: #3b4e6b; 
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tbody tr:hover {
+    background-color: #e0f7fa; 
+    cursor: default;
+}
+
+
+/* SEÇÃO GALERIA (CSS Grid) */
+#Galeria {
+    scroll-margin-top: 140px; 
+    padding-bottom: 50px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 15px;
+}
+
+.galeria-item {
+    overflow: hidden; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    display: block;
+}
+
+
+/* SEÇÃO CONTATO (Formulário) */
+.formulario-contato {
+    max-width: 550px; 
+    margin: 0 auto 70px auto; 
+    padding: 30px;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    background-color: #fff; 
+    display: flex; 
+    flex-direction: column;
+    gap: 12px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-contato label {
+    font-weight: bold;
+    margin-top: 5px; 
+    color: #323841;
+    font-size: 14px;
+}
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    padding: 12px; 
+    border: 1px solid #aaa; 
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.formulario-contato input[type="text"]:focus,
+.formulario-contato input[type="email"]:focus,
+.formulario-contato textarea:focus {
+    border-color: #3b4e6b; 
+    outline: none;
+}
+
+.formulario-contato textarea {
+    resize: vertical; 
+}
+
+.btn-submit {
+    background-color: #3b4e6b;
+    color: white;
+    padding: 14px 20px; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2a3a50;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #323841;
+    color: white;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f6f2ee;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+    /* Layouts do Header e Sobre Mim */
+    .navegacao-principal {
+        justify-content: space-around;
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 6px 10px;
+    }
+    
+    .conteudo-sobre-flex {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .img1 {
+        width: 100%; 
+        max-width: 300px;
+        margin-top: 0; 
+        margin-bottom: 20px;
+    }
+
+    .card-sobre {
+        margin: 20px 10px; 
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .card-sobre .titulo1 {
+        font-size: 22px;
+    }
+
+    /* Layouts dos Projetos no Mobile */
+    .caixa, .projeto-adicional {
+        flex-basis: 100%; /* Cada card ocupa uma linha inteira no mobile */
+        max-width: 100%;
+    }
+}
+.link {
+    text-decoration: none;
+    color: #acacac;
+    transition: 0.3s;
+}
+.link:hover {
+    text-decoration: none;
+    color: #d3d3d3;
+}
